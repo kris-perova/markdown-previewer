@@ -1,21 +1,18 @@
-import {useState} from "react";
+import {marked} from "marked";
 
-const PreviewerField = () => {
-    const [text, setText] = useState('');
+const PreviewerField = ({text}) => {
+    // the first way - it's not recommended in react
+    // useEffect(()=>{
+    //     document.getElementById('content').innerHTML = marked.parse(text);
+    // }, [text])
 
-    const handleChange = (e) => {
-        setText(e.target.value);
-    }
+    // the second way:
+    // document.getElementById('content').innerHTML = marked.parse(text);
 
     return (
         <div className={'markdownField'}>
             <h3 className={'header'}>Previewer</h3>
-            <input
-                className={'textArea'}
-                type={'text'}
-                onChange={handleChange}
-                value={text}
-            />
+            <div dangerouslySetInnerHTML={{__html: marked.parse(text)}}/>
         </div>
     );
 
