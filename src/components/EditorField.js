@@ -1,9 +1,6 @@
-import {useState} from "react";
 
 
-const EditorField = () => {
-    const [text, setText] = useState('');
-
+const EditorField = ({text, setText}) => {
     const handleChange = (e) => {
         setText(e.target.value);
     }
@@ -15,7 +12,7 @@ const EditorField = () => {
                 className={'textArea'}
                 type={'text'}
                 onChange={handleChange}
-                value={text} // устанавливается из состояния компонента [text]
+                // value={text} // устанавливается из состояния компонента [text]
             />
         </div>
     );
