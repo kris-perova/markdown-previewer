@@ -1,5 +1,3 @@
-
-
 const EditorField = ({text, setText}) => {
     const handleChange = (e) => {
         setText(e.target.value);
@@ -12,7 +10,7 @@ const EditorField = ({text, setText}) => {
                 className={'textArea'}
                 type={'text'}
                 onChange={handleChange}
-                // value={text} // устанавливается из состояния компонента [text]
+                value={text} // устанавливается из состояния компонента [text]
             />
         </div>
     );
