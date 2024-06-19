@@ -6,7 +6,7 @@ const EditorField = ({text, setText}) => {
     }
 
     return (
-        <div className={'markdownField'}>
+        <div className={'editorField'}>
             <h3 className={'header'}>Editor</h3>
             <input
                 className={'textArea'}

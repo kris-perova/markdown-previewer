@@ -10,9 +10,9 @@ const PreviewerField = ({text}) => {
     // document.getElementById('content').innerHTML = marked.parse(text);
 
     return (
-        <div className={'markdownField'}>
+        <div className={'previewerField'}>
             <h3 className={'header'}>Previewer</h3>
-            <div dangerouslySetInnerHTML={{__html: marked.parse(text)}}/>
+            <div className={'previewerText'} dangerouslySetInnerHTML={{__html: marked.parse(text)}}/>
         </div>
     );
 
