@@ -1,20 +1,27 @@
- .markdownField {
+.generalContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90vh;
+}
+
+.editorField, .previewerField {
      border: 1px solid black;
      border-radius: 5px;
-     width: 400px;
- }
-
-.header {
-    /*border: solid;*/
-    /*color: green;*/
-    /*padding-bottom: 0;*/
-    /*margin: 0;*/
-    /*width: 400px;*/
 }
 
 .textArea {
     /*padding-top: 0;*/
     /*border-color: green;*/
-    width: 400px;
+    /*width: 393px;*/
+    border: 1px solid black;
+}
 
+input:valid {
+    box-shadow: none;
+    outline: none;
+}
+
+input:invalid {
+    box-shadow: none;
+    outline: none;
 }
