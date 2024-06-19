@@ -18,7 +18,7 @@ const PreviewerField = ({text}) => { // {Markdown text}
         <div className={'previewerField'}>
             <h3 className={'header'}>Previewer</h3>
             {/*<div className={'previewerText'} dangerouslySetInnerHTML={{__html: cleanHtmlString}}/>*/}
-            <div>
+            <div className={'textArea'}>
                 {parse(cleanHtmlString)} {/* converting the string into the React element*/}
             </div>
         </div>

@@ -7,7 +7,7 @@ function App() {
     const [text, setText] = useState('');
 
   return (
-    <>
+    <div className={'generalContainer'}>
       <EditorField
           text={text}
           setText={setText}
@@ -15,7 +15,7 @@ function App() {
       <PreviewerField
           text={text}
       />
-    </>
+    </div>
   );
 }
 
