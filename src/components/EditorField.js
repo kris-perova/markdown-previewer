@@ -1,3 +1,5 @@
+import pen from "../icons/pen.png"
+
 const EditorField = ({text, setText}) => {
 
     const handleChange = (e) => {
@@ -6,8 +8,11 @@ const EditorField = ({text, setText}) => {
 
     return (
         <div className={'editorBlock'}>
-            <div>
-                <h3 className={'header'}>Editor</h3>
+            <div  className={'header'}>
+                <img style={{width: "30px", height: "30px"}}
+                    src={pen}
+                    alt="editor field"/>
+                <h3>Editor</h3>
             </div>
 
             <div className={'editorField'}>
