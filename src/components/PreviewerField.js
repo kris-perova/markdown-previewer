@@ -2,6 +2,9 @@ import {marked} from "marked";
 import DOMPurify from "dompurify";
 import parse from "html-react-parser";
 import view from "../icons/view.png"
+import {transformLink} from "../utils.js"
+
+
 
 const PreviewerField = ({text}) => { // {Markdown text}
     // the first way - it's not recommended in react
@@ -26,11 +29,10 @@ const PreviewerField = ({text}) => { // {Markdown text}
 
             {/*<div className={'previewerText'} dangerouslySetInnerHTML={{__html: cleanHtmlString}}/>*/}
             <div className={'viewArea'}>
-                {parse(cleanHtmlString)} {/* converting the string into the React element*/}
+                {parse(cleanHtmlString, { replace: transformLink })} {/* converting the string into the React element*/}
             </div>
         </div>
     );
-
 }
 
 export default PreviewerField;
