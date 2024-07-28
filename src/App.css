@@ -4,7 +4,6 @@
     align-items: center; /* vertical */
     height: 100vh;
     width: 100vw;
-    /*background-color: yellowgreen; !* Дополнительный стиль для фона *!*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,33 +14,87 @@
     width: 95%;
     height: 95%;
     display: flex; /* use flexbox for children */
-    /*background-color: red; !* Дополнительный стиль для фона - пока что красный для наглядности*!*/
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     border-radius: 10px;
+    overflow: hidden; /* Prevent child elements from overflowing */
 }
 
-/* Styles for editorBlock и previewerBlock */
+/* Styles for editorBlock and previewerBlock */
 .editorBlock, .previewerBlock {
-    flex: 1; /* each field take the equal space */
+    flex: 1; /* each field takes equal space */
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 10px; /* Reset border radius to avoid double rounded corners */
+    overflow: hidden; /* Ensure child elements do not overflow */
+    display: flex;
+    flex-direction: column; /* Ensure children are stacked vertically */
 }
 
 .editorBlock {
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right: 1px solid black;
 }
 
 .previewerBlock {
-    /*background-color: #cccccc;*/
-    border-left: 0px;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
-.editorBlock {
-    /*background-color: #cccccc;*/
-    border-right: 1px solid black;
+
+/* Ensure pre and code blocks respect parent container's width */
+pre {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    max-width: 100%; /* Ensure it doesn't exceed the parent's width */
+    overflow: auto; /* Add scrollbars if needed */
+    padding: 10px; /* Optional: Add padding for better readability */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    white-space: pre-wrap; /* Ensure long lines break to avoid overflow */
+}
+
+code {
+    background-color: inherit; /* Match the background color of the pre tag */
+    border-radius: inherit; /* Match the border radius of the pre tag */
+    padding: 0; /* Remove default padding from code tag */
+    box-sizing: inherit; /* Match the box-sizing of the pre tag */
+    display: inline; /* Ensure code is inline within pre */
+}
+
+/* Adjust inputArea to fill its parent container */
+.inputArea {
+    margin: 5px;
+    flex: 1; /* Allow it to grow and fill available space */
+    resize: none;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: calc(100% - 10px); /* Ensure it takes the full width minus margin */
+    height: calc(100% - 10px); /* Ensure it takes the full height minus margin */
+}
+
+/* Switch off the textarea default behavior in browser */
+textarea:valid {
+    box-shadow: none;
+    outline: none;
+}
+
+textarea:invalid {
+    box-shadow: none;
+    outline: none;
+}
+
+.viewArea {
+    height: 85vh;
+    margin-top: 15px;
+    overflow: auto;
+}
+
+img {
+    width: 95%;
+    height: 95%;
 }
 
 h3 {
@@ -56,59 +109,9 @@ h3 {
     flex-direction: row;
     border-bottom: 1px black solid;
 }
-
 .editorField {
     /*background-color: red; !* Дополнительный стиль для фона *!*/
     display: flex;
     height: 85vh;
     margin-top: 15px;
-}
-
-.previewerBlock {
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-}
-
-.inputArea {
-    margin: 5px;
-    flex: 1; /* responsible for space allocation inside the container */
-    height: auto;
-    resize: none;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-/*switch off the textarea default behavior in browser i*/
-textarea:valid {
-    box-shadow: none;
-    outline: none;
-}
-
-textarea:invalid {
-    box-shadow: none;
-    outline: none;
-}
-
-.viewArea {
-    /*background-color: red;*/
-    height: 85vh;
-
-    margin-top: 15px;
-    overflow: auto;
-    /*max-height: 100%;*/
-}
-
-img {
-    width: 95%;
-    height: 95%;
-}
-
-pre {
-    background-color: whitesmoke;
-    border-radius: 5px;
-}
-
-code {
-    background-color: whitesmoke;
-    border-radius: 5px;
 }
