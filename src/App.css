@@ -1,27 +1,114 @@
+.outerContainer {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    height: 100vh;
+    width: 100vw;
+    /*background-color: yellowgreen; !* Дополнительный стиль для фона *!*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Inner container takes 95% outer container's width and height */
 .generalContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 90vh;
+    width: 95%;
+    height: 95%;
+    display: flex; /* use flexbox for children */
+    /*background-color: red; !* Дополнительный стиль для фона - пока что красный для наглядности*!*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 
-.editorField, .previewerField {
-     border: 1px solid black;
-     border-radius: 5px;
-}
-
-.textArea {
-    /*padding-top: 0;*/
-    /*border-color: green;*/
-    /*width: 393px;*/
+/* Styles for editorBlock и previewerBlock */
+.editorBlock, .previewerBlock {
+    flex: 1; /* each field take the equal space */
+    padding: 10px;
+    box-sizing: border-box;
     border: 1px solid black;
+    border-radius: 10px;
 }
 
-input:valid {
+.editorBlock {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.previewerBlock {
+    /*background-color: #cccccc;*/
+    border-left: 0px;
+}
+.editorBlock {
+    /*background-color: #cccccc;*/
+    border-right: 1px solid black;
+}
+
+h3 {
+    margin: 5px;
+    font-weight: normal;
+}
+
+.header {
+    height: 30px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px black solid;
+}
+
+.editorField {
+    /*background-color: red; !* Дополнительный стиль для фона *!*/
+    display: flex;
+    height: 85vh;
+    margin-top: 15px;
+}
+
+.previewerBlock {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.inputArea {
+    margin: 5px;
+    flex: 1; /* responsible for space allocation inside the container */
+    height: auto;
+    resize: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/*switch off the textarea default behavior in browser i*/
+textarea:valid {
     box-shadow: none;
     outline: none;
 }
 
-input:invalid {
+textarea:invalid {
     box-shadow: none;
     outline: none;
+}
+
+.viewArea {
+    /*background-color: red;*/
+    height: 85vh;
+
+    margin-top: 15px;
+    overflow: auto;
+    /*max-height: 100%;*/
+}
+
+img {
+    width: 95%;
+    height: 95%;
+}
+
+pre {
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+code {
+    background-color: whitesmoke;
+    border-radius: 5px;
 }
