@@ -1,7 +1,7 @@
 .outerContainer {
     display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center; /* vertical */
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -9,27 +9,25 @@
     box-sizing: border-box;
 }
 
-/* Inner container takes 95% outer container's width and height */
 .generalContainer {
     width: 95%;
     height: 95%;
-    display: flex; /* use flexbox for children */
+    display: flex;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     border-radius: 10px;
-    overflow: hidden; /* Prevent child elements from overflowing */
+    overflow: hidden;
 }
 
-/* Styles for editorBlock and previewerBlock */
 .editorBlock, .previewerBlock {
-    flex: 1; /* each field takes equal space */
+    flex: 1;
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid black;
-    border-radius: 10px; /* Reset border radius to avoid double rounded corners */
-    overflow: hidden; /* Ensure child elements do not overflow */
+    border-radius: 10px;
+    overflow: hidden;
     display: flex;
-    flex-direction: column; /* Ensure children are stacked vertically */
+    flex-direction: column;
 }
 
 .editorBlock {
@@ -44,38 +42,35 @@
     border-bottom-left-radius: 0;
 }
 
-/* Ensure pre and code blocks respect parent container's width */
 pre {
     background-color: whitesmoke;
     border-radius: 5px;
-    max-width: 100%; /* Ensure it doesn't exceed the parent's width */
-    overflow: auto; /* Add scrollbars if needed */
-    padding: 10px; /* Optional: Add padding for better readability */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    white-space: pre-wrap; /* Ensure long lines break to avoid overflow */
+    max-width: 100%;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    white-space: pre-wrap;
 }
 
 code {
-    background-color: inherit; /* Match the background color of the pre tag */
-    border-radius: inherit; /* Match the border radius of the pre tag */
-    padding: 0; /* Remove default padding from code tag */
-    box-sizing: inherit; /* Match the box-sizing of the pre tag */
-    display: inline; /* Ensure code is inline within pre */
+    background-color: inherit;
+    border-radius: inherit;
+    padding: 0;
+    box-sizing: inherit;
+    display: inline;
 }
 
-/* Adjust inputArea to fill its parent container */
 .inputArea {
     margin: 5px;
-    flex: 1; /* Allow it to grow and fill available space */
+    flex: 1;
     resize: none;
     border-radius: 5px;
     padding: 5px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    width: calc(100% - 10px); /* Ensure it takes the full width minus margin */
-    height: calc(100% - 10px); /* Ensure it takes the full height minus margin */
+    box-sizing: border-box;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
 }
 
-/* Switch off the textarea default behavior in browser */
 textarea:valid {
     box-shadow: none;
     outline: none;
@@ -109,8 +104,8 @@ h3 {
     flex-direction: row;
     border-bottom: 1px black solid;
 }
+
 .editorField {
-    /*background-color: red; !* Дополнительный стиль для фона *!*/
     display: flex;
     height: 85vh;
     margin-top: 15px;
