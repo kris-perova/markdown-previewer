@@ -12,44 +12,46 @@ export function transformLink(node) {
 
 export const markdownSample = '# Welcome to my React Project!\n' +
     '\n' +
-    '## My name is Kristina Perova\n' +
-    '### And here\'s some other cool stuff about me:\n' +
+    '## Heading level 2\n' +
+    '### Heading level 3\n' +
     '\n' +
-    'Heres some code, `<div></div>`, between 2 backticks.\n' +
+    'Here\'s some block code, `<div></div>`, between 2 backticks(`).\n' +
     '\n' +
-    '```\n' +
-    '// this is multi-line code:\n' +
+    '```' +
     '\n' +
-    'function anotherExample(firstLine, lastLine) {\n' +
-    '  if (firstLine == \'```\' && lastLine == \'```\') {\n' +
-    '    return multiLineCode;\n' +
+    '// this is a multi-line code:\n' +
+    '\n' +
+    'function helloWorld {\n' +
+    '  console.log(Hello, World!);\n' +
     '  }\n' +
-    '}\n' +
-    '```\n' +
     '\n' +
-    'You can also make text **bold**... whoa!\n' +
-    'Or _italic_.\n' +
-    'Or... wait for it... **_both!_**\n' +
-    'And feel free to go crazy ~~crossing stuff out~~.\n' +
+    'helloWorld();\n' +
+    '```' +
     '\n' +
-    'There\'s also [links](https://www.freecodecamp.org), and\n' +
-    '> Block Quotes!\n' +
+    'You can also emphasize the text`: **bold** or _italic_.\n' +
+    'Or **_both!_**\n' +
+    'It\'s possible to ~~cross the text out~~.\n' +
     '\n' +
-    'And if you want to get really crazy, even tables:\n' +
+    'Also you can link to my [page](https://kris-perova.github.io/)' +
     '\n' +
-    'Wild Header | Crazy Header | Another Header?\n' +
-    '------------ | ------------- | -------------\n' +
-    'Your content can | be here, and it | can be here....\n' +
-    'And here. | Okay. | I think we get it.\n' +
+    'Is\'s possible to add a table:\n' +
     '\n' +
-    '- And of course there are lists.\n' +
-    '  - Some are bulleted.\n' +
-    '     - With different indentation levels.\n' +
-    '        - That look like this.\n' +
+    'Column 1 | Column 2  | Column 3 \n' +
+    '-------- | -------   | -------- \n' +
+    'Text     | Text      | Text     \n' +
+    'Text     | Text      | Text     \n' +
+    '\n' +
+    '- Some lists.\n' +
+    '  - First item.\n' +
+    '     - Second item.\n' +
+    '        - Third item.\n' +
     '\n' +
     '\n' +
-    '1. And there are numbered lists too.\n' +
-    '1. Use just 1s if you want!\n' +
-    '1. And last but not least, let\'s not forget embedded images:\n' +
+    'You can create an ordered list: \n' +
+    '1. First item.\n' +
+    '1. Second item.\n' +
+    '3. Third item.\n' +
     '\n' +
-    '![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)\n';
+    'And finally a MEME from [xkcd](https://xkcd.com/1296/):\n' +
+    '\n' +
+    '![freeCodeCamp Logo](https://imgs.xkcd.com/comics/git_commit.png)\n';
