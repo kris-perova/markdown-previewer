@@ -53,11 +53,11 @@ pre {
 }
 
 code {
-    background-color: inherit;
-    border-radius: inherit;
+    border-radius: 5px;
     padding: 0;
     box-sizing: inherit;
     display: inline;
+    background-color: whitesmoke;
 }
 
 .inputArea {
