@@ -15,7 +15,7 @@ export const markdownSample = '# Welcome to my React Project!\n' +
     '## Heading level 2\n' +
     '### Heading level 3\n' +
     '\n' +
-    'Here\'s some block code, `<div></div>`, between 2 backticks(`).\n' +
+    'Here is some text as computer `code` between 2 backticks(`) and the code block:\n' +
     '\n' +
     '```' +
     '\n' +
@@ -28,13 +28,12 @@ export const markdownSample = '# Welcome to my React Project!\n' +
     'helloWorld();\n' +
     '```' +
     '\n' +
-    'You can also emphasize the text`: **bold** or _italic_.\n' +
-    'Or **_both!_**\n' +
-    'It\'s possible to ~~cross the text out~~.\n' +
+    'You can also emphasize the text: **bold**, _italic_ or **_both!_**\n' +
+    'It is possible to ~~cross the text out~~.\n' +
     '\n' +
-    'Also you can link to my [page](https://kris-perova.github.io/)' +
+    'Also you can link to my [page](https://kris-perova.github.io/).\n' +
     '\n' +
-    'Is\'s possible to add a table:\n' +
+    'Is is possible to add a table:\n' +
     '\n' +
     'Column 1 | Column 2  | Column 3 \n' +
     '-------- | -------   | -------- \n' +
@@ -54,4 +53,4 @@ export const markdownSample = '# Welcome to my React Project!\n' +
     '\n' +
     'And finally a MEME from [xkcd](https://xkcd.com/1296/):\n' +
     '\n' +
-    '![freeCodeCamp Logo](https://imgs.xkcd.com/comics/git_commit.png)\n';
+    '![git commit meme](https://imgs.xkcd.com/comics/git_commit.png)\n';
